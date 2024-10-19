@@ -1,14 +1,12 @@
-div > h1 {
-   color: #09b3bf;
-}
+
 body > div > div > ol > li {
     margin: 0 5px;
+    color: black;
 }
 
 div.container-image > img {
     width: 100%;
 }
-
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
@@ -22,13 +20,36 @@ body {
     background-repeat: repeat-y;
 }
 div > h1 {
-   color: #fff;
+   color: #333; /* Трохи м'якший чорний */
    font-family: 'Ubuntu', sans-serif;
+   font-size: 3rem; /* Зробити заголовок великим */
+   font-weight: bold; /* Виділити заголовок жирністю */
+   text-transform: uppercase; /* Зробити всі літери великими */
+   letter-spacing: 2px; /* Збільшити відстань між буквами */
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Додати легку тінь */
+   background: linear-gradient(90deg, #ff6b6b, #f06595); /* Градієнтний фон для тексту */
+   -webkit-background-clip: text; /* Вирізати фон на тексті */
+   -webkit-text-fill-color: transparent; /* Зробити сам текст прозорим, щоб був видимий тільки фон */
+   padding: 10px 20px; /* Додати внутрішній відступ */
+   border-radius: 5px; /* Зробити кути злегка округлими */
 }
+
 body > div > nav > div > a > h4 {
-   color: #fff;
+   color: #b3d7ff; /* М'якший відтінок чорного */
    font-family: 'Ubuntu', sans-serif;
+   font-size: 2.2rem; /* Трохи збільшуємо текст */
+   font-weight: 600; /* Зробити текст трохи жирнішим */
+   text-transform: capitalize; /* Перша літера кожного слова велика */
+   letter-spacing: 1px; /* Трохи збільшити відстань між літерами */
+   transition: color 0.3s ease, transform 0.3s ease; /* Додаємо плавний перехід для кольору та масштабу */
 }
+
+body > div > nav > div > a > h4:hover {
+   color: #ff6b6b; /* Яскравий колір при наведенні */
+   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Легка тінь при наведенні */
+   transform: scale(1.05); /* Легке збільшення тексту при наведенні */
+}
+
 .article-block {
    background: #fff;
    color:  #383838;
@@ -38,12 +59,34 @@ body > div > nav > div > a > h4 {
    margin: 10px;
 }
 .article-block a {
-   color: #383838;
+   color: black; /* Сірий колір для нейтрального вигляду */
    font-family: 'Ubuntu', sans-serif;
+   font-size: 1rem; /* Стандартний розмір тексту */
+   font-weight: 500; /* Помірна жирність тексту */
+   text-decoration: none; /* Прибрати підкреслення */
+   border-bottom: 2px solid transparent; /* Додаємо ефект лінії під текстом */
+   transition: color 0.3s ease, border-bottom 0.3s ease; /* Плавний перехід для кольору і лінії */
 }
+
+.article-block a:hover {
+   color: #ff6b6b; /* Яскравий колір при наведенні */
+   border-bottom: 2px solid #ff6b6b; /* Підкреслення кольором при наведенні */
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Додаємо легку тінь для об'єму */
+}
+
 body > div > div > ol > li {
     margin: 0 5px;
 }
 div.container-image > img {
     width: 100%;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    text-align: left;
+    background-color: #fff;
 }
