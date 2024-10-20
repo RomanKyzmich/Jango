@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Pacifico&display=swap');
 body > div > div > ol > li {
     margin: 0 5px;
     color: black;
@@ -8,79 +9,9 @@ div.container-image > img {
     width: 100%;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 18px;
-  }
-}
 body {
     background-image: url('../img/bg.jpg');
-    background-repeat: repeat-y;
-}
-div > h1 {
-   color: #333; /* Трохи м'якший чорний */
-   font-family: 'Ubuntu', sans-serif;
-   font-size: 3rem; /* Зробити заголовок великим */
-   font-weight: bold; /* Виділити заголовок жирністю */
-   text-transform: uppercase; /* Зробити всі літери великими */
-   letter-spacing: 2px; /* Збільшити відстань між буквами */
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Додати легку тінь */
-   background: linear-gradient(90deg, #ff6b6b, #f06595); /* Градієнтний фон для тексту */
-   -webkit-background-clip: text; /* Вирізати фон на тексті */
-   -webkit-text-fill-color: transparent; /* Зробити сам текст прозорим, щоб був видимий тільки фон */
-   padding: 10px 20px; /* Додати внутрішній відступ */
-   border-radius: 5px; /* Зробити кути злегка округлими */
-}
-
-body > div > nav > div > a > h4 {
-   color: #b3d7ff; /* М'якший відтінок чорного */
-   font-family: 'Ubuntu', sans-serif;
-   font-size: 2.2rem; /* Трохи збільшуємо текст */
-   font-weight: 600; /* Зробити текст трохи жирнішим */
-   text-transform: capitalize; /* Перша літера кожного слова велика */
-   letter-spacing: 1px; /* Трохи збільшити відстань між літерами */
-   transition: color 0.3s ease, transform 0.3s ease; /* Додаємо плавний перехід для кольору та масштабу */
-}
-
-body > div > nav > div > a > h4:hover {
-   color: #ff6b6b; /* Яскравий колір при наведенні */
-   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Легка тінь при наведенні */
-   transform: scale(1.05); /* Легке збільшення тексту при наведенні */
-}
-
-.article-block {
-   background: #fff;
-   color:  #383838;
-   font-family: 'Ubuntu', sans-serif;
-   box-shadow: 2px 2px 1px #ccc;
-   padding: 10px;
-   margin: 10px;
-}
-.article-block a {
-   color: black; /* Сірий колір для нейтрального вигляду */
-   font-family: 'Ubuntu', sans-serif;
-   font-size: 1rem; /* Стандартний розмір тексту */
-   font-weight: 500; /* Помірна жирність тексту */
-   text-decoration: none; /* Прибрати підкреслення */
-   border-bottom: 2px solid transparent; /* Додаємо ефект лінії під текстом */
-   transition: color 0.3s ease, border-bottom 0.3s ease; /* Плавний перехід для кольору і лінії */
-}
-
-.article-block a:hover {
-   color: #ff6b6b; /* Яскравий колір при наведенні */
-   border-bottom: 2px solid #ff6b6b; /* Підкреслення кольором при наведенні */
-   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Додаємо легку тінь для об'єму */
-}
-
-body > div > div > ol > li {
-    margin: 0 5px;
-}
-div.container-image > img {
-    width: 100%;
-}
-body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1rem;
@@ -89,4 +20,203 @@ body {
     color: white;
     text-align: left;
     background-color: #fff;
+
+}
+/* Стиль для Персональний блог  */
+.header-text {
+    font-size: 3rem; /* Розмір заголовка */
+    font-weight: bold; /* Жирність заголовка */
+    text-transform: uppercase; /* Усі літери великі */
+    letter-spacing: 2px; /* Відстань між буквами */
+    background: white;
+    -webkit-background-clip: text; /* Вирізати фон на тексті */
+    -webkit-text-fill-color: transparent; /* Зробити текст прозорим */
+    padding: 10px 20px; /* Внутрішній відступ */
+    border-radius: 5px; /* Закруглені кути */
+    display: inline-block; /* Для анімації */
+    animation: text-animation 1s ease infinite alternate; /* Анімація заголовка */
+}
+
+
+
+/* Стилі для першого слова */
+.header-text .first-word {
+    font-family: "Pacifico", cursive;
+    font-style: normal;
+}
+
+/* Стилі для другого слова */
+.header-text .second-word {
+    font-family: "Pacifico", cursive;
+    font-style: normal;
+}
+
+
+/*Стиль категорій*/
+.categories-text {
+   color: #6eb1f3; /* М'якший відтінок чорного */
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 2.2rem; /* Трохи збільшуємо текст */
+   font-weight: 600; /* Зробити текст трохи жирнішим */
+   text-transform: capitalize; /* Перша літера кожного слова велика */
+   letter-spacing: 1px; /* Трохи збільшити відстань між літерами */
+   transition: color 0.3s ease, transform 0.3s ease; /* Додаємо плавний перехід для кольору та масштабу */
+}
+
+
+/*Стилі блоку публікацій*/
+.article-block {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.article-block:hover {
+    transform: scale(1.02);
+}
+
+/*Стилі для заголовку блоку публікацій*/
+.article-block .header-text-article-block {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+
+}
+/*Стилі для заголовку дати публікацій*/
+.article-block .data-article-block {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+
+}
+
+.article-block .text-article-block {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Стиль для заголовків публікаціх на головній сторінці */
+a h4 {
+    font-size: 18px;
+
+    margin: 0;
+}
+
+/* Стиль для кнопки перегляду всіх публікацій */
+.all-articles-text {
+    display: inline-block; /* Дозволяє кнопці мати відступи */
+    background-color: #ff6b6b; /* Основний колір фону кнопки */
+    color: white; /* Колір тексту */
+    font-size: 1.5rem; /* Розмір шрифту */
+    font-weight: bold; /* Жирність тексту */
+    padding: 15px 30px; /* Внутрішній відступ */
+    border-radius: 5px; /* Закруглені кути */
+    text-decoration: none; /* Без підкреслення */
+    transition: background-color 0.3s, transform 0.2s; /* Анімація зміни фону та масштабування */
+}
+
+/* Ефект при наведенні */
+.all-articles-text:hover {
+    background-color: #f06595; /* Зміна кольору фону при наведенні */
+    transform: scale(1.05); /* Легке збільшення кнопки */
+}
+
+nav.navbar .categories-container {
+    background-color: #f8f9fa; /* Світлий фон */
+    padding: 15px; /* Внутрішні відступи */
+    border: 2px solid #ddd; /* Рамка */
+    border-radius: 15px; /* Закруглені кути */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    display: flex;
+    justify-content: space-around; /* Рівномірний розподіл елементів */
+    align-items: center;
+}
+
+nav.navbar a {
+    text-decoration: none;
+    color: #007bff; /* Синій колір для посилань */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav.navbar a:hover {
+    color: #0056b3; /* Темніший відтінок синього при наведенні */
+}
+
+nav.navbar h4 {
+    font-size: 28px; /* Розмір тексту */
+    margin: 0;
+}
+
+nav.navbar a:hover h4 {
+    color: #0056b3; /* Зміна кольору при наведенні */
+}
+.article-container {
+    background-color: #f5f5f5; /* Світло-сірий фон для контейнера */
+    padding: 20px; /* Відступи всередині контейнера */
+    border-radius: 10px; /* Закруглені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    max-width: 800px;
+    margin: 20px auto; /* Центрування контейнера */
+}
+
+.article-container h3 {
+    color: #333; /* Трохи темніший відтінок чорного для заголовку */
+    margin-bottom: 10px;
+}
+
+.article-container h5 {
+    color: #666; /* Сірий колір для дати публікації */
+    margin-bottom: 20px;
+}
+/*Стиль тексту в самій публікації*/
+.article-container .row-text {
+    color: #000; /* Чорний колір тексту */
+    font-size: 16px; /* Розмір шрифту */
+    line-height: 1.6; /* Висота між рядками для зручного читання */
+}
+
+.breadcrumb {
+    background-color: transparent; /* Прибираємо фон для breadcrumb */
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.breadcrumb li a {
+    color: #007bff; /* Синій колір для посилань у breadcrumb */
+    text-decoration: none;
+}
+
+.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+    color: #555; /* Колір для поточного елемента breadcrumb */
+}
+
+/*Стилі дяля публікацій у вкладці всі публікації*/
+.articles-row {
+    background-color: #f9f9f9; /* Світлий фон */
+    border: 1px solid #ddd; /* Легкий бордюр */
+    border-radius: 8px; /* Закруглені кути */
+    padding: 15px; /* Внутрішній відступ */
+    margin-bottom: 20px; /* Відступ між статтями */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    transition: background-color 0.3s; /* Анімація зміни фону */
+}
+
+.articles-row:hover {
+    background-color: #e9ecef; /* Змінюємо фон при наведенні */
+}
+.articles-row p {
+    color: #000; /* Чорний колір тексту */
+    font-size: 16px; /* Розмір шрифту */
+    line-height: 1.6; /* Висота між рядками для зручного читання */
+}
+.articles-container h5 {
+    color: #666; /* Сірий колір для дати публікації */
+    margin-bottom: 20px;
 }

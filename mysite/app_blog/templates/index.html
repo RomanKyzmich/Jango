@@ -5,12 +5,12 @@
 
 {% if categories %}
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container">
+  <div class="container categories-container">
     {% for item in categories %}
     <a href="{{ item.get_absolute_url }}">
-        <h4>{{ item.category }}</h4>
+        <h4 class="categories-text">{{ item.category }}</h4>
     </a>
-{% endfor %}
+    {% endfor %}
   </div>
 </nav>
 {% endif %}
@@ -18,19 +18,19 @@
 {% for item in articles %}
 <div class="article-block">
     <a href="{{ item.get_absolute_url }}">
-        <h4>{{ item.title }}</h4>
+        <h4 class="header-text-article-block">{{ item.title }}</h4>
     </a>
-    <h5>
+    <h5 class="data-article-block">
         {{ item.pub_date|date:"j E Y"|safe|linebreaks }}
     </h5>
-    <p>
+    <p class="text-article-block">
         {{ item.description|safe|escape|striptags|truncatewords_html:32 }}
     </p>
 </div>
 {% endfor %}
 {% endif %}
     <a href="{% url 'articles-list' %}">
-        <h4>Всі публікації</h4>
+        <h4 class="all-articles-text">Всі публікації</h4>
     </a>
 {% endspaceless %}
 {% endblock %}

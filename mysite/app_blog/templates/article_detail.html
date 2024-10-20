@@ -5,13 +5,13 @@
 {% block content %}
 {% spaceless %}
 
-<div>
+<div class="article-container">
     <ol class="breadcrumb">
         <li><a href="/">Головна</a></li>
         <li><a href="{% url 'articles-list' %}">Публікації</a></li>
         <li>{{ item.title|upper }}</li>
     </ol>
-    <div>
+    <div class="row-header">
         <h3>
             {{ item.title }}
         </h3>
@@ -19,15 +19,15 @@
             {{ item.pub_date|date:"d E Y"|safe|linebreaks }}
         </h5>
     </div>
-    <div>
+    <div class="row-text">
         {{ item.description|escape|safe }}
 
         {% if item.images.all %}
         {% include 'fotorama.html' with images=images %}
         {% endif %}
-
     </div>
     <div class='clearfix'></div>
 </div>
+
 {% endspaceless %}
 {% endblock %}
