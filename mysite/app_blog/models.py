@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-
+# models.py
 from django.utils import timezone
-
 from django.db import models
 from django.urls import reverse
 
@@ -14,7 +13,7 @@ class Category(models.Model):
 
 
     class Meta:
-        verbose_name = u'Категорія для публікації'
+        verbose_name = u'Категорії для публікацій'
         verbose_name_plural = u'Категорії для публікацій'
 
     def __str__(self):
@@ -39,15 +38,11 @@ class Article(models.Model):
     slug = models.SlugField(u'Слаг',
                             unique_for_date='pub_date')
 
-    main_page = models.BooleanField(u'Головна',
-                                    default=False,
-                                    help_text=u'Показувати')
+    main_page = models.BooleanField(u'Головна', default=True,
+                                    help_text=u'Показувати на головній сторінці')
     category = models.ForeignKey(Category,
-                                 related_name='news',
-                                 blank=True,
-                                 null=True,
-                                 verbose_name=u'Категорія',
-                                 on_delete=models.CASCADE)
+                             related_name='articles', blank=True, null=True,
+                             verbose_name=u'Категорія', on_delete=models.CASCADE)
     objects = models.Manager()
 
     class Meta:
