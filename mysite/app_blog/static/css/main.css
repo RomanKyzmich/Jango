@@ -99,12 +99,7 @@ body {
     color: #555;
 }
 
-/* Стиль для заголовків публікаціх на головній сторінці */
-a h4 {
-    font-size: 18px;
 
-    margin: 0;
-}
 
 /* Стиль для кнопки перегляду всіх публікацій */
 .all-articles-text {
@@ -219,4 +214,10 @@ nav.navbar a:hover h4 {
 .articles-container h5 {
     color: #666; /* Сірий колір для дати публікації */
     margin-bottom: 20px;
+}
+#text {
+    font-size: 20px;
+    color: blue;
+    padding: 10px;
+    background-color: lightgray;
 }

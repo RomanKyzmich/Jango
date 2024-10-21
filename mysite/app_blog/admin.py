@@ -35,16 +35,15 @@ class ArticleImageInline(admin.TabularInline):
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'pub_date', 'slug', 'main_page')
+    list_display = ('title', 'pub_date', 'slug', 'main_page', 'category')  # Додано category
     inlines = [ArticleImageInline]
     multiupload_form = True
     multiupload_list = False
     prepopulated_fields = {'slug': ('title',)}
-    raw_id_fields = ('category',)
+    raw_id_fields = ('category',)  # Залиште це, якщо хочете використовувати raw_id для вибору категорій
     fieldsets = (
         ('', {
-            'fields': ('pub_date', 'title', 'description',
-                       'main_page'),
+            'fields': ('pub_date', 'title', 'description', 'category', 'main_page'),  # Додано category
         }),
         ((u'Додатково'), {
             'classes': ('grp-collapse grp-closed',),
@@ -54,7 +53,6 @@ class ArticleAdmin(admin.ModelAdmin):
 
     def delete_file(self, pk, request):
         '''Delete an image.'''
-
         obj = get_object_or_404(ArticleImage, pk=pk)
         return obj.delete()
 

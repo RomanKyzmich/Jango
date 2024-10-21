@@ -40,9 +40,8 @@ class Article(models.Model):
 
     main_page = models.BooleanField(u'Головна', default=True,
                                     help_text=u'Показувати на головній сторінці')
-    category = models.ForeignKey(Category,
-                             related_name='articles', blank=True, null=True,
-                             verbose_name=u'Категорія', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='articles', blank=True, null=True,
+                                 verbose_name=u'Категорія', on_delete=models.CASCADE)
     objects = models.Manager()
 
     class Meta:
